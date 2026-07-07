@@ -87,6 +87,15 @@
   .review h2{font-size:clamp(28px,3.6vw,42px);}
   .review p{color:var(--muted);font-size:18px;margin:16px auto 28px;max-width:46ch;}
 
+  /* VIDEO */
+  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .video{position:relative;aspect-ratio:16/9;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:var(--basalt);}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .video-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(155deg,var(--moss),var(--basalt));}
+  .video-ph .play{width:58px;height:58px;border-radius:50%;background:rgba(246,245,240,.14);border:1px solid rgba(246,245,240,.45);display:flex;align-items:center;justify-content:center;color:var(--paper);font-size:18px;padding-left:4px;}
+  .video-ph span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,245,240,.82);}
+  @media(max-width:820px){.video-grid{grid-template-columns:1fr;}}
+
   /* SECTION base */
   .section{padding:120px 0;}
   .section-head{max-width:58ch;margin-bottom:64px;}
@@ -221,11 +230,11 @@
       <span>Groundworks Therapy</span>
     </a>
     <div class="nav-links">
+      <a href="#video">Video</a>
       <a href="#meet">Meet Ben</a>
       <a href="#approach">Approach</a>
       <a href="#services">Services</a>
       <a href="#icbc">ICBC</a>
-      <a href="#faq">FAQ</a>
       <a href="#visit">Visit</a>
     </div>
     <a class="btn btn-primary" href="https://risebewellness.janeapp.com/#/staff_member/21">Book a session</a>
@@ -243,7 +252,7 @@
         <p class="byline reveal">Groundworks Therapy · <strong>Ben Tsang, RMT</strong></p>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="https://risebewellness.janeapp.com/#/staff_member/21">Book a session</a>
-          <a class="btn btn-ghost" href="#icbc">ICBC direct billing</a>
+          <a class="btn btn-ghost" href="#icbc">New ICBC patients</a>
         </div>
       </div>
       <div class="hero-logo-wrap reveal">
@@ -259,6 +268,38 @@
     </svg>
   </div>
 </header>
+
+<!-- VIDEO -->
+<section class="section videos" id="video">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Video</span>
+      <h2>Injury, rehab &amp; performance</h2>
+      <p>Short videos on how the body actually moves, how injuries heal, and how to build back stronger — new ones posted regularly.</p>
+    </div>
+    <div class="video-grid reveal">
+      <!-- HOW TO EMBED A VIDEO:
+           For any slot below, delete that slot's <div class="video video-ph">…</div> line
+           and uncomment the <div class="video">…</div> line above it, replacing VIDEO_ID with the
+           11-character ID from the video's URL (the part after "watch?v=" in youtube.com/watch?v=VIDEO_ID). -->
+
+      <!-- SLOT 1 -->
+      <!-- <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Groundworks Therapy video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div> -->
+      <div class="video video-ph"><div class="play">&#9654;</div><span>Video coming soon</span></div>
+
+      <!-- SLOT 2 -->
+      <!-- <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Groundworks Therapy video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div> -->
+      <div class="video video-ph"><div class="play">&#9654;</div><span>Video coming soon</span></div>
+
+      <!-- SLOT 3 -->
+      <!-- <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Groundworks Therapy video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div> -->
+      <div class="video video-ph"><div class="play">&#9654;</div><span>Video coming soon</span></div>
+    </div>
+    <div class="reveal" style="margin-top:38px;">
+      <a class="btn btn-primary" href="https://www.youtube.com/@Groundworkstherapy" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
+  </div>
+</section>
 
 <!-- LEAVE A REVIEW -->
 <section class="review" id="review">
@@ -384,16 +425,17 @@
   <div class="wrap">
     <div class="icbc-grid">
       <div class="reveal">
-        <span class="eyebrow">ICBC &amp; direct billing</span>
-        <h2>In an accident? You likely don't pay out of pocket.</h2>
-        <p>If you have an active ICBC claim, registered massage therapy is one of the treatments covered under your care — and Groundworks direct-bills ICBC, so you can focus on recovery instead of paperwork and reimbursements.</p>
-        <a class="btn btn-light" href="https://risebewellness.janeapp.com/#/staff_member/21">Book your first visit</a>
+        <span class="eyebrow">New ICBC patients</span>
+        <h2>Recently been in an accident?</h2>
+        <p>Difficult time returning to your work, daily activities, and simple day-to-day tasks? I'm accepting new ICBC patients with an active claim number.</p>
+        <p style="color:var(--paper);font-weight:500;margin-top:18px;">Please email <a href="mailto:groundworksyvr@gmail.com" style="color:var(--ochre);text-decoration:underline;">groundworksyvr@gmail.com</a> for inquiries before booking online.</p>
+        <a class="btn btn-light" href="mailto:groundworksyvr@gmail.com">Email for inquiries</a>
       </div>
       <div class="icbc-facts reveal">
-        <div class="icbc-fact"><div class="k">Direct billing</div><div class="v">Billed straight to ICBC on active claims — no upfront cost for covered visits.</div></div>
-        <div class="icbc-fact"><div class="k">What to bring</div><div class="v">Your ICBC claim number and the date of your accident. That's usually all it takes to get started.</div></div>
+        <div class="icbc-fact"><div class="k">Active claim</div><div class="v">You'll need an open ICBC claim with a claim number to get started.</div></div>
+        <div class="icbc-fact"><div class="k">Email first</div><div class="v">Reach out at groundworksyvr@gmail.com before booking so we can confirm the details of your claim.</div></div>
+        <div class="icbc-fact"><div class="k">What to bring</div><div class="v">Your ICBC claim number and the date of your accident.</div></div>
         <div class="icbc-fact"><div class="k">No referral needed</div><div class="v">You don't need a doctor's referral to start massage therapy under most ICBC claims.</div></div>
-        <div class="icbc-fact"><div class="k">Extended health too</div><div class="v">Not an ICBC claim? Direct billing is available for many extended health plans — just ask.</div></div>
       </div>
     </div>
   </div>
@@ -407,7 +449,7 @@
       <h2>Frequently asked questions</h2>
     </div>
     <div class="faq reveal">
-      <div class="q"><button aria-expanded="false">Do you direct-bill ICBC?</button><div class="a"><div class="a-inner">Yes. For active ICBC claims, treatment is billed directly to ICBC, so there's no upfront cost for covered visits. Bring your claim number and accident date to your first appointment.</div></div></div>
+      <div class="q"><button aria-expanded="false">Do you direct-bill ICBC?</button><div class="a"><div class="a-inner">Yes, for active ICBC claims. Please email groundworksyvr@gmail.com before booking so we can confirm your claim details, then bring your claim number and accident date to your first appointment.</div></div></div>
       <div class="q"><button aria-expanded="false">Do you direct-bill extended health insurance?</button><div class="a"><div class="a-inner">Direct billing is available for many extended health plans. Coverage varies by provider and plan, so it's worth confirming your massage therapy coverage with your insurer — and letting me know at booking so I can set it up.</div></div></div>
       <div class="q"><button aria-expanded="false">Do I need a doctor's referral?</button><div class="a"><div class="a-inner">No referral is needed to book a session. Some extended health plans ask for a physician's note to reimburse — check your specific plan if you plan to claim it.</div></div></div>
       <div class="q"><button aria-expanded="false">What happens at my first visit?</button><div class="a"><div class="a-inner">We start with a short conversation about what's going on and your goals, then a movement and range-of-motion assessment to find what's driving it. From there we move into hands-on treatment, and you'll leave with a couple of simple things to do between visits.</div></div></div>
@@ -539,7 +581,7 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"Do you direct-bill ICBC?","acceptedAnswer":{"@type":"Answer","text":"Yes. For active ICBC claims, treatment is billed directly to ICBC, so there is no upfront cost for covered visits. Bring your claim number and accident date to your first appointment."}},
+    {"@type":"Question","name":"Do you direct-bill ICBC?","acceptedAnswer":{"@type":"Answer","text":"Yes, for active ICBC claims. Please email groundworksyvr@gmail.com before booking so we can confirm your claim details, then bring your claim number and accident date to your first visit."}},
     {"@type":"Question","name":"Do you direct-bill extended health insurance?","acceptedAnswer":{"@type":"Answer","text":"Direct billing is available for many extended health plans. Coverage varies by provider and plan, so confirm your massage therapy coverage with your insurer and let us know at booking."}},
     {"@type":"Question","name":"Do I need a doctor's referral?","acceptedAnswer":{"@type":"Answer","text":"No referral is needed to book a session. Some extended health plans ask for a physician's note to reimburse, so check your specific plan if you intend to claim it."}},
     {"@type":"Question","name":"What happens at my first visit?","acceptedAnswer":{"@type":"Answer","text":"We start with a short conversation about your goals, then a movement and range-of-motion assessment to find what is driving the pain, followed by hands-on treatment and simple exercises to do between visits."}},
